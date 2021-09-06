@@ -3,7 +3,7 @@ import sys
 def solution(record):
     answerUID = []
     answer = []
-    typeString = {"Enter":"들어왔습니다.", "Leave":"나갔습니다."}
+    typeString = {"Enter":"님이 들어왔습니다.", "Leave":"님이 나갔습니다."}
     nicknameRecord = {}
     
     for data in record:
@@ -12,7 +12,7 @@ def solution(record):
         #한문장에 저장해두면 String Replace를 해야하므로  별도로 저장한다
         if(splittedData[0]!="Change"):
             answerUID.append(splittedData[1])
-            answer.append("님이 " + typeString[splittedData[0]])
+            answer.append(typeString[splittedData[0]])
         
         #Leave는 닉네임이 없다.
         if(splittedData[0]!="Leave"):

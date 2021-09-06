@@ -18,7 +18,7 @@ def sharkMove(r,c,s,d):
         elif(d==1 and r==0):     d=2
         elif(d==2 and r==R-1):   d=1
         
-        if(d>2):    #가로이동
+        if(d>=2):    #가로이동
             c=c+sharkDelta[d-1][1]
         else:       #세로이동
             r=r+sharkDelta[d-1][0]
